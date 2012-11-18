@@ -5,9 +5,6 @@
   "main": "bin/webfinger-service",
   "author": "Nick Jennings <nick@silverbucket.net>",
   "license": "GPL",
-  "bin": {
-    "teste": "./bin/webfinger-service"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/silverbucket/webfinger-service-nodejs.git"
