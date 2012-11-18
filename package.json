@@ -1,0 +1,34 @@
+{
+  "name": "webfinger-service",
+  "version": "0.0.1",
+  "description": "a simple webfinger service for node.js",
+  "main": "bin/webfinger-service",
+  "author": "Nick Jennings <nick@silverbucket.net>",
+  "license": "GPL",
+  "bin": {
+    "teste": "./bin/webfinger-service"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/silverbucket/webfinger-service-nodejs.git"
+  },
+  "homepage": "http://github.com/silverbucket/webfinger-service-nodejs",
+  "author": {
+    "name": "Nick Jennings",
+    "email": "nick@silverbucket.net"
+  },
+  "dependencies": {
+    "walk": "*",
+    "express": "*",
+    "teste": "*"
+  },
+  "scripts": {
+    "test": "node_modules/teste/bin/teste"
+  },
+  "keywords": [
+      "webfinger",
+      "service",
+      "server"
+  ]
+}
+
