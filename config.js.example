@@ -1,0 +1,5 @@
+module.exports = {
+    port: '9110',
+    protocol: 'http', // http or https
+    domain: 'example.com'
+};
