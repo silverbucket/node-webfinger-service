@@ -55,7 +55,7 @@ setup
 	So, if your filename is `bob` then lookups for `bob@[yourdomain]` will return
 	that json object.
 
-3. set HAProxy
+3. setup a proxy ( HAProxy )
 
 	You can also setup nginx to forward, but I've only tested with HAProxy.
 
