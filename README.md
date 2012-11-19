@@ -63,7 +63,6 @@ setup
 				bind *:80
 				...
 				acl is_webfinger path_beg -i /.well-known
-
 				use_backend webfinger if is_webfinger
 				...
 		backend webfinger
