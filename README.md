@@ -74,7 +74,7 @@ setup
 
 	**Don't forget to restart HAProxy**
 
-4. Start the service
+4. Start the webfinger-service
 
 		$ bin/webfinger-service
 
