@@ -31,7 +31,7 @@ setup
 
 	All of the user data lives in the `resource/acct/` directory. Each file is
 	treated as a username when webfinger-service does it's looking. An example
-	user data file is there, and looks like this:
+	user data file is there named `user`, and looks like this:
 
 		module.exports = {
 			"subject" : "acct:user@example.com",
