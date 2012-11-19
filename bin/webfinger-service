@@ -43,10 +43,10 @@
   app.get('/', function (req, res) {
     res.send("webfinger-service is running");
   });
-  app.get('/host-meta', function (req, res) {
+  app.get('/.well-known/host-meta', function (req, res) {
     wf.hostMeta(req, res);
   });
-  app.get('/host-meta.json', function (req, res) {
+  app.get('/.well-known/host-meta.json', function (req, res) {
     wf.hostMeta(req, res);
   });
 
