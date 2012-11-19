@@ -6,9 +6,9 @@ a webfinger service implementation in node.js
 introduction
 ------------
 
-	This is a very simple WebFinger service written for node.js. It only supports
-	JSON at the moment, and could very well have bugs. Feedback, contributions
-	and bug reports welcome.
+This is a very simple WebFinger service written for node.js. It only supports
+JSON at the moment, and could very well have bugs. Feedback, contributions
+and bug reports welcome.
 
 
 install
@@ -59,18 +59,18 @@ setup
 
 	You can also setup nginx to forward, but I've only tested with HAProxy.
 
-	frontend public
-			bind *:80
-			...
-			acl is_webfinger path_beg -i /.well-known
+		frontend public
+				bind *:80
+				...
+				acl is_webfinger path_beg -i /.well-known
 
-			use_backend webfinger if is_webfinger
-			...
-	backend webfinger
-			timeout server 30s
-			option httpclose
-			option forwardfor
-			server srv1 127.0.0.1:9110  # or whatever port you chose in config.js
+				use_backend webfinger if is_webfinger
+				...
+		backend webfinger
+				timeout server 30s
+				option httpclose
+				option forwardfor
+				server srv1 127.0.0.1:9110  # or whatever port you chose in config.js
 
 	**Don't forget to restart HAProxy**
 
