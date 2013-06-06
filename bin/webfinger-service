@@ -49,6 +49,9 @@
   app.get('/.well-known/host-meta.json', function (req, res) {
     wf.hostMeta(req, res);
   });
+  app.get('/.well-known/webfinger', function (req, res) {
+    wf.hostMeta(req, res);
+  });
 
   http.createServer(app).listen(app.get('port'), function () {
     console.log("webfinger service listening on port " + app.get('port'));
