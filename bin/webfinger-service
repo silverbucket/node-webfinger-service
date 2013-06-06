@@ -18,6 +18,7 @@
 
   var app = express();
   var port = config.port || 9110;
+  var ip = config.ip || '';
 
   var wf = require('../lib/webfinger-service');
 
@@ -50,7 +51,7 @@
     wf.hostMeta(req, res);
   });
 
-  http.createServer(app).listen(app.get('port'), function () {
+  http.createServer(app).listen(app.get('port'), ip, function () {
     console.log("webfinger service listening on port " + app.get('port'));
   });
 })();

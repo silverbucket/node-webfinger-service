@@ -1,5 +1,6 @@
 module.exports = {
     port: '9110',
+    ip: '127.0.0.1', // ip address/interface to bind to, leave blank for all
     protocol: 'http', // http or https
     domain: 'example.com'
 };
