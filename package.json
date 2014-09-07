@@ -16,12 +16,8 @@
   },
   "dependencies": {
     "walk": "*",
-    "express": "*",
-    "teste": "*"
-  },
-  "scripts": {
-    "test": "node_modules/teste/bin/teste"
-  },
+    "express": "*"
+  }
   "keywords": [
       "webfinger",
       "service",
