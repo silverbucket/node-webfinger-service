@@ -79,7 +79,7 @@ setup
 
 		$ bin/webfinger-service
 
-example reqest/response
+example request/response
 ---------------
 A request like that: `GET http://localhost:9110/.well-known/webfinger?resource=acct:user@example.com`
 will response this:
