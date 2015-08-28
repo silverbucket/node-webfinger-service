@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "walk": "*",
-    "express": "*"
+    "express": "^3.2"
   },
   "keywords": [
       "webfinger",
