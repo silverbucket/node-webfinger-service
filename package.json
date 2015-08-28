@@ -17,11 +17,10 @@
   "dependencies": {
     "walk": "*",
     "express": "*"
-  }
+  },
   "keywords": [
       "webfinger",
       "service",
       "server"
   ]
 }
-
