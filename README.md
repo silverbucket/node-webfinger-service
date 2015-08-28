@@ -16,6 +16,7 @@ install
 
 		$ git clone git://github.com/silverbucket/node-webfinger-service.git
 		$ cd node-webfinger-service
+		$ npm install
 
 setup
 -----
@@ -24,7 +25,7 @@ setup
 
 		$ cp config.js.example config.js
 
-	Edit the `config.js` and set your domain name, and the protocol (http or 
+	Edit the `config.js` and set your domain name, and the protocol (http or
 	https) that you will receive requests on.
 
 2. user data
@@ -77,4 +78,3 @@ setup
 4. Start the webfinger-service
 
 		$ bin/webfinger-service
-
