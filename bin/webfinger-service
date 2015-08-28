@@ -14,7 +14,11 @@
   var express = require('express'),
       config = require('../config.js'),
       http = require('http'),
-      path = require('path');
+      path = require('path'),
+      bodyParser = require('body-parser'),
+      methodOverride = require('method-override'),
+      errorhandler = require('errorhandler'),
+      logger = require('morgan');
 
   var app = express();
   var port = config.port || 9110;
@@ -23,21 +27,19 @@
   var wf = require('../lib/webfinger-service');
 
 
-  app.configure(function () {
     app.set('port', process.env.PORT || port);
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
-    app.use(express.favicon());
-    app.use(express.logger('dev'));
-    app.use(express.bodyParser());
-    app.use(express.methodOverride());
-    app.use(app.router);
+    app.use(logger('dev'));
+    app.use(bodyParser.json());
+    app.use(methodOverride());
+    //app.use(app.router);
     app.use(express.static(path.join(__dirname, 'public')));
-  });
 
-  app.configure('development', function () {
-    app.use(express.errorHandler());
-  });
+    if (process.env.NODE_ENV === 'development') {
+      // only use in development
+      app.use(errorhandler())
+    }
 
   app.enable('trust proxy');
 
