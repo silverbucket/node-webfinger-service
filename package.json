@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "a simple webfinger service for node.js",
   "main": "bin/webfinger-service",
+  "scripts": {
+    "test": "echo \"no tests specified\" && exit 0" 
+  },
   "author": {
     "name": "Nick Jennings",
     "email": "nick@silverbucket.net"
