@@ -35,25 +35,25 @@ setup
 	actually check for any system accounts). An example
 	user data file is there named `user`, and looks like this:
 
-		module.exports = {
-			"subject" : "acct:user@example.com",
-			"links" :
-			[
-				{
-					"rel" : "http://webfinger.net/rel/avatar",
-					"href" : "http://exmaple.com/images/avatar.jpg"
-				},
-				{
-					"rel" : "http://webfinger.net/rel/profile-page",
-					"href" : "http://www.example.com/user/profile"
-				},
-				{
-					"rel" : "http://packetizer.com/rel/blog",
-					"href" : "http://exmaple.com/blog"
-				}
-			]
-		};
-
+```javascript
+module.exports = {
+	"subject" : "acct:user@example.com",
+	"links" : [
+		{
+			"rel" : "http://webfinger.net/rel/avatar",
+			"href" : "http://exmaple.com/images/avatar.jpg"
+		},
+		{
+			"rel" : "http://webfinger.net/rel/profile-page",
+			"href" : "http://www.example.com/user/profile"
+		},
+		{
+			"rel" : "http://packetizer.com/rel/blog",
+			"href" : "http://exmaple.com/blog"
+		}
+	]
+};
+```
 	So, if your filename is `bob` then lookups for `bob@[yourdomain]` will return
 	that json object.
 
