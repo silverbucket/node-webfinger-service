@@ -81,9 +81,26 @@ setup
 
 example request/response
 ---------------
-A request like that: `GET http://localhost:9110/.well-known/webfinger?resource=acct:user@example.com`
-will response this:
-```
-{"subject":"acct:user@example.com","links":[{"rel":"http://webfinger.net/rel/avatar","href":"http://exmaple.com/images/avatar.jpg"},{"rel":"http://webfinger.net/rel/profile-page","href":"http://www.example.com/user/profile"},{"rel":"http://packetizer.com/rel/blog","href":"http://exmaple.com/blog"}]}
+A request like this: 
+`GET http://localhost:9110/.well-known/webfinger?resource=acct:user@example.com`
 
+Shoudl provide a response like this:
+```javascript
+{
+  "subject":  "acct:user@example.com",
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/avatar",
+      "href": "http://exmaple.com/images/avatar.jpg"
+    },
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "href": "http://www.example.com/user/profile"
+    },
+    {
+      "rel": "http://packetizer.com/rel/blog",
+      "href": "http://exmaple.com/blog"
+    }
+  ]
+}
 ```
