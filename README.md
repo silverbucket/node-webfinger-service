@@ -13,17 +13,20 @@ and bug reports welcome.
 
 install
 -------
-
-		$ git clone git://github.com/silverbucket/node-webfinger-service.git
-		$ cd node-webfinger-service
-		$ npm install
+```
+$ git clone git://github.com/silverbucket/node-webfinger-service.git
+$ cd node-webfinger-service
+$ npm install
+```
 
 setup
 -----
 
 1. basic config
 
-		$ cp config.js.example config.js
+```
+$ cp config.js.example config.js
+```
 
 	Edit the `config.js` and set your domain name, and the protocol (http or
 	https) that you will receive requests on.
@@ -36,23 +39,23 @@ setup
 	user data file is there named `user`, and looks like this:
 
 ```javascript
-		module.exports = {
-			"subject" : "acct:user@example.com",
-			"links" : [
-				{
-					"rel" : "http://webfinger.net/rel/avatar",
-					"href" : "http://exmaple.com/images/avatar.jpg"
-				},
-				{
-					"rel" : "http://webfinger.net/rel/profile-page",
-					"href" : "http://www.example.com/user/profile"
-				},
-				{
-					"rel" : "http://packetizer.com/rel/blog",
-					"href" : "http://exmaple.com/blog"
-				}
-			]
-		};
+  module.exports = {
+    "subject" : "acct:user@example.com",
+    "links" : [
+      {
+	      "rel" : "http://webfinger.net/rel/avatar",
+	      "href" : "http://exmaple.com/images/avatar.jpg"
+	    },
+  	  {
+	      "rel" : "http://webfinger.net/rel/profile-page",
+	      "href" : "http://www.example.com/user/profile"
+	    },
+      {
+	      "rel" : "http://packetizer.com/rel/blog",
+	      "href" : "http://exmaple.com/blog"
+	    }
+	  ]
+	};
 ```
 	So, if your filename is `bob` then lookups for `bob@[yourdomain]` will return
 	that json object.
@@ -61,23 +64,27 @@ setup
 
 	You can also setup nginx to forward, but I've only tested with HAProxy.
 
-		frontend public
-				bind *:80
-				...
-				acl is_webfinger path_beg -i /.well-known
-				use_backend webfinger if is_webfinger
-				...
-		backend webfinger
-				timeout server 30s
-				option httpclose
-				option forwardfor
-				server srv1 127.0.0.1:9110  # or whatever port you chose in config.js
+```
+frontend public
+  bind *:80
+  ...
+  acl is_webfinger path_beg -i /.well-known
+  use_backend webfinger if is_webfinger
+  ...
+  backend webfinger
+    timeout server 30s
+    option httpclose
+    option forwardfor
+    server srv1 127.0.0.1:9110  # or whatever port you chose in config.js
+```
 
 	**Don't forget to restart HAProxy**
 
 4. Start the webfinger-service
 
-		$ bin/webfinger-service
+```
+$ bin/webfinger-service
+```
 
 example request/response
 ---------------
