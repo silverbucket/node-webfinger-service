@@ -4,7 +4,7 @@
   "description": "a simple webfinger service for node.js",
   "main": "bin/webfinger-service",
   "scripts": {
-    "test": "echo \"no tests specified\" && exit 0" 
+    "test": "echo \"no tests specified\" && exit 0"
   },
   "author": {
     "name": "Nick Jennings",
@@ -21,14 +21,6 @@
     "service",
     "server"
   ],
-  "devDependencies": {
-    "body-parser": "^1.13.3",
-    "errorhandler": "^1.4.2",
-    "express": "^4.13.3",
-    "method-override": "^2.3.5",
-    "morgan": "^1.6.1",
-    "walk": "^2.3.9"
-  },
   "dependencies": {
     "body-parser": "^1.13.3",
     "errorhandler": "^1.4.2",
@@ -36,7 +28,7 @@
     "http": "0.0.0",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
-    "path": "^0.11.14",
+    "path": "^0.12.7",
     "walk": "^2.3.9"
   }
 }
